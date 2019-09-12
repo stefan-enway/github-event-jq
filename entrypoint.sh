@@ -3,4 +3,4 @@ set -eu
 
 FILTER=$INPUT_FILTER
 
-sh -c "cat $GITHUB_EVENT_PATH| jq"
+sh -c "cat $GITHUB_EVENT_PATH| jq $FILTER"
