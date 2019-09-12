@@ -1,4 +1,6 @@
 #!/bin/sh
 set -eu
 
-sh -c "cat $GITHUB_EVENT_PATH| jq $*"
+FILTER=$INPUT_FILTER
+
+sh -c "cat $GITHUB_EVENT_PATH| jq $FILTER"
